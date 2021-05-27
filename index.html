@@ -1,29 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+   header{
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+   }
+
+   footer{
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background-color: #eeeeee;
+    position: fixed;
+    padding:5px;
+    
+   }
+   
+   nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+   }
+   nav div{
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+}
+body{
+    height:100vh;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+} 
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 300px;
+}
+.main-logo{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+#search{
+    width: 500px;
+    border-radius: 30px;
+    height: 40px;
+    border: 1px solid #e1e1e1;
+    
+}
+#search:hover, #search:active, #search:focus{
+    box-shadow: 0px 1.7px 5px #dfdfdf;;
+    outline: none;
+}
+
+.buttons{
+    padding-top: 20px;
+    
+}
+
+}
+.buttons div{
+    margin: 5px;
+    padding: 10px;
+    color: #3b3b3b;
+    background-color: #eee;
+    border-color: #c0c0c0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.buttons div:hover{
+    border: 1px solid #c0c0c0;
+}
+.buttons a:hover{
+    text-decoration: none;
+}
+.navword{
+    
+    color:#3b3b3b;
+    margin: 5px;
+    font-size: 14px;
+    
+}
+nav div:nth-child(1){
+    justify-content: start;
+}
+nav div:nth-child(2){
+    justify-content: flex-end;
+    text-align: right;
+    right: 0;
+}
+.login{
+    background-color: #4285F4;
+    margin: 5px;
+    padding: 5px 10px;
+    color: white;
+    border-color: #c0c0c0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+</style>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Google</title>
-        <link rel="stylesheet" href="styles/main.css" />
+    
     </head>
+    
     <body>
+    <!--Header nav section-->
+    <header>
+        <nav class="Nav">
+            <div>
+                <a href="#" class="navword">About</a>
+                <a href="#" class="navword">Store</a>   
+            </div>
+            <div>
+                <a href="#" class="navword">Gmail</a>
+                <a href="#" class="navword">Images</a>
+                <button class="navword login" type="login">Sign in</button>  
+            </div>
+            
+        </nav>
+    </header>
     
-        <div class="page">
-            <div class="page-container">
-                <nav class="nav">
-                    <ul class="nav-list1">
-                        <li class="nav-item"><a href="#" class="nav-link"Gmail></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"Images></a></li>
-                        <li class="nav-item nav-item_app">
-                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="37" width="26" height="26"/><rect width="26" height="26"/><rect x="74" width="26" height="26"/><rect x="37" y="37" width="26" height="26"/><rect y="37" width="26" height="26"/><rect x="74" y="37" width="26" height="26"/><rect x="37" y="74" width="26" height="26"/><rect y="74" width="26" height="26"/><rect x="74" y="74" width="26" height="26"/></svg>
-                         </li>
-                    </ul>
-    
-                </nav>
+
+
+        <!-- Main elements-->
+        <main class="main">
+            <div class="main-logo">
+                <img src="Images/google-logo.png" alt="Google Logo" width="272" height="92">
+            </div>
+            <div class="search">
+                <input type="search" id="search" name="search">
+            </div>
+            <div class="buttons">
+                <button type="gsearch">Google Search</button>
+                <button type="lucky">I'm Feeling Lucky</button>
+            </div>
+        </main>
             </div>
             
         </div>
-      
+        <!--Footer nav section-->
+    <footer>
+        <nav class="Nav">
+            <div>
+                <a href="#" class="navword">Advertising</a>
+                <a href="#" class="navword">Business</a>   
+                <a href="#" class="navword">How Search works</a>
+            </div>
+            <div>
+                <a href="#" class="navword">Privacy</a>
+                <a href="#" class="navword">Terms</a>
+                <a href="#" class="navword">Settings</a>
+                
+            </div>
+            
+        </nav>
+    </footer>
     </body>
 </html>
